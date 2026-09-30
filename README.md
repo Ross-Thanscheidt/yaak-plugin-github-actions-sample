@@ -58,7 +58,7 @@ Describe what your plugin does.
     - The `.github/workflows/build-plugin.yml` workflow file should build the plugin and upload it to the **Artifacts** section of the workflow run
     - Download the `yaak-plugin.zip` plugin file using the GitHub UI or GitHub CLI:
         - Go to the GitHub.com repository **→ Actions** tab **→** latest workflow run **→ Artifacts** section
-        - `gh run download -name yaak-plugin.zip -D subdirname` to download/extract to the specified subdirectory
+        - `gh run download -name yaak-plugin.zip -D subdirname` to download/extract to subdirectory
     - Unzip the files into a directory
     - In Yaak, go to **Settings** (`Ctrl`+`,`) **→ Plugins → Installed**
         - Click on the **Select Plugin** button
