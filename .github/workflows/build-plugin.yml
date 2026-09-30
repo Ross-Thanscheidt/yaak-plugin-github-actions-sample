@@ -20,15 +20,17 @@ jobs:
           node-version: '24' # Yaak CLI requires Node.js 24+
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g @yaakapp/cli
 
       - name: Build plugin
-        run: npm run build
+        run: yaak plugin build
 
       - name: Upload build results
         uses: actions/upload-artifact@v7
         with:
-          name: yaak-plugin-artifact
+          name: yaak-plugin-build-${{ github.run_id }}.zip
           path: |
             dist/
             build/

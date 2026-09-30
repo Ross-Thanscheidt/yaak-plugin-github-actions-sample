@@ -55,9 +55,11 @@ Describe what your plugin does.
 ## Using GitHub Actions to Build the Yaak Plugin
 
 - Pushing changes to GitHub should trigger the GitHub Actions Workflow to build the plugin
-    - The `.github/workflows/build-plugin.yml` workflow file should build the plugin and upload it to the Artifacts section of the workflow run
-    - Download the `yaak-plugin-artifact` plugin file using the GitHub UI or GitHub CLI (`gh run download <run_id> -n yaak-plugin-artifact`)
-    - Extract the files from `yaak-plugin-artifact` to a directory
+    - The `.github/workflows/build-plugin.yml` workflow file should build the plugin and upload it to the **Artifacts** section of the workflow run
+    - Download the `yaak-plugin-build-#.zip` plugin file
+        - Using the GitHub UI (go to the **Artifacts** section of the latest workflow run on the **Actions** tab)
+        - Using GitHub CLI (`gh run download` to download to the `~\Downloads` directory)
+    - Unzip the files into a directory
     - In Yaak, go to **Settings** (`Ctrl`+`,`) **→ Plugins → Installed**
         - Click on the **Select Plugin** button
         - Go to the plugin directory that contains the `package.json` file
