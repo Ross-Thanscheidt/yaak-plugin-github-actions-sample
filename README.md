@@ -52,6 +52,8 @@ Describe what your plugin does.
     Node.js v24.15.0
     ```
 
+  Apparently this is a [known issue](https://github.com/nodejs/node/issues/61165) with Node.js v22 and higher.
+
 ## Using GitHub Actions to Build the Yaak Plugin
 
 - Pushing changes to GitHub should trigger the GitHub Actions Workflow to build the plugin
