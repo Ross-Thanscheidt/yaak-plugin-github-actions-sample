@@ -5,5 +5,9 @@
 # Alternatively you could download the yaak-plugin.zip artifact using a browser
 # from the latest workflow run on the Actions tab of the repository on GitHub.com
 
-Remove-Item -Path dist\ -Recurse
+if (Test-Path 'dist' -PathType Container)
+{
+    Remove-Item 'dist' -Recurse
+}
+
 gh run download -n yaak-plugin.zip -D dist
